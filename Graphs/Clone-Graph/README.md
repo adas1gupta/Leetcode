@@ -27,5 +27,5 @@
 See `solution.py`
 
 ## ✅ Time & Space
-- Time: O(m * n)
-- Space: O(m * n)
+- Time: O(V + E) where V is number of vertices and E is number of edges
+- Space: O(V)
