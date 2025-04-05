@@ -1,4 +1,4 @@
-# Leetcode 703 - Max Area of Islands (Easy)
+# Leetcode 703 - Kth Largest Element in a Stream (Easy)
 
 **Topic**: Heaps
 **Link**: https://leetcode.com/problems/kth-largest-element-in-a-stream/description/
