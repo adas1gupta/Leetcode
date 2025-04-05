@@ -27,5 +27,5 @@
 See `solution.py`
 
 ## ✅ Time & Space
-- Time: O(m * n)
-- Space: O(m * n)
+- Time: O(mlogk) #m is the number of calls; k is the size of the heap
+- Space: O(k)
