@@ -20,7 +20,6 @@
         - maxArea = max(dfs(row, col), maxArea) 
     - Return maxArea
  
-
 ## 🧪 Code
 See `solution.py`
 
