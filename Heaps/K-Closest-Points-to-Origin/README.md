@@ -19,5 +19,5 @@
 See `solution.py`
 
 ## ✅ Time & Space
-- Time: O(mlogk) #m is the number of add calls; k is the size of the heap
+- Time: O(nlogk) #n is the length of the input array; k is the size of the heap
 - Space: O(k)
