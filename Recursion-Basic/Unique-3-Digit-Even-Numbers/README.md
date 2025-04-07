@@ -37,5 +37,7 @@
 See `solution.py`
 
 ## ✅ Time & Space
+
+# Recursion
 - Time: O(n ^ 3) -> This is because there are n * (n - 1) * (n - 2) choices. 
 - Space: O(n) -> maximum recursion depth is 3 so the only space complexity proportional to the size of the array is the used digits array. 
