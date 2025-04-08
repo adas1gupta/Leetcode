@@ -1,6 +1,6 @@
 # Leetcode 3483 - Unique 3-Digit Even Numbers (Medium)
 
-**Topic**: Heaps
+**Topic**: Basic Recursion
 **Link**: https://leetcode.com/problems/unique-3-digit-even-numbers/description/
 
 ## Notes:
