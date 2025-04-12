@@ -18,5 +18,5 @@ See `solution.py`
 ## ✅ Time & Space
 
 # Recursion
-- Time: O(logn) -> binary search
-- Space: O(logn) -> logn calls 
+- Time: O(n + m) -> binary search
+- Space: O(n) -> logn calls 
