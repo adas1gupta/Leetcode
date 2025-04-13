@@ -9,7 +9,7 @@
         - return in that case
     - append the value of the node to the result list
     - explore right path
-    - call helper on root
+ - call helper on root
  - return result list
 
 ## 🧪 Code
