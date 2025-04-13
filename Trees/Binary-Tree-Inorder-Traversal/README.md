@@ -11,12 +11,12 @@
     - explore right path
     - call helper on root
  - return result list
- 
+
 ## 🧪 Code
 See `solution.py`
 
 ## ✅ Time & Space
+- Time: O(n) -> explore all the nodes
+- Space: O(h) -> height of the tree is the amount of space stored for the call stack
+         O(n) -> if result list is being factored in. 
 
-# Recursion
-- Time: O(n) -> binary search
-- Space: This can vary between constant and O(n). The average and worst cases are O(n) because the queue size can scale with the number of nodes. However, the best case is that there can be n nodes, but 1 node per level. 
