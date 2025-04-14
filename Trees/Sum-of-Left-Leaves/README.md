@@ -1,25 +1,22 @@
-# Leetcode 111 - Minimum Depth of Binary Tree (Easy)
+# Leetcode 404 - Sum of Left Leaves (Easy)
 
-**Topic**: BFS, Minimum Depth
-**Link**: https://leetcode.com/problems/minimum-depth-of-binary-tree/description/
+**Topic**: BFS
+**Link**: https://leetcode.com/problems/sum-of-left-leaves/description/
 
 ## Notes:
 
 # BFS
- - The reason why we're using bfs here is because you want to stop at the first level where we see a leaf node. 
-    - The first level you reach is the answer. 
- - Include the if empty root return ? condition because of queue shenanigans. 
- - Initialize a queue, min_depth, and a counter to keep track of the levels. 
- - While queue, for _ in range(len(queue)), pop the left node. 
-    - If it's a leaf node, make the min_depth and counter comparison.
-    - If node.left, append left. 
-    - If node.right, append right. 
- - Increment the counter after each iteration of the for loop. 
- - Use BFS when you are looking for the shortest path, stop as soon as possible, or track information about a level. 
- - Use DFS when you're accumulating values, exploring entire paths, or backtracking. 
- - BFS for first thing you can find; DFS for best thing you can find. 
-
- 
+ - Using bfs here because we're not necessarily interested in the path here. We're more so interested in seeing if the node is a left leaf, and there's other ways of detecting that. 
+ - Since we're using bfs, include the standard if not root base case. 
+ - Initialize a queue with the [(root, 'r')] where 'r' is used to indicate if the node is a left or right leaf. 
+ - Have a total variable. 
+ - Set up the queue stuff. 
+    - Pop node and status.
+    - Check if it's a leaf node and if it's status is left.
+    - If it is, add to total. 
+    - If there's a left node, add it to the queue with a left status.
+    - If there's a right node, add it to the queue with a right status. 
+ - Return total. 
 ## 🧪 Code
 See `solution.py`
 
@@ -27,4 +24,6 @@ See `solution.py`
 
 # Recursion
 - Time: O(n) -> number of nodes. 
-- Space: O(n) -> complete binary tree introduces worst case space complexity of a level to be n // 2. 
+- Space: O(n) -> O(n) in the worst case
+         O(2^h) -> in the average case where the tree is balanced. This is where h is equal to the (last_level - first_level), otherwise known as (last_level - 1). For example if there are 4 levels, the height is 3. This is amortized to O(n).  
+         O(1) in the best case where the tree is skewed. 
