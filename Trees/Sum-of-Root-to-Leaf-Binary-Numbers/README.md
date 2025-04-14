@@ -11,7 +11,7 @@
         - Some sort of code: in this case, adding the node.val to the path string. 
         - checking if it's a leaf node, and if it is, add to the total and return. 
             - total += int(path, 2) -> 2 indicates that the path string is a binary number, and int turns the binary number into base 10. 
-        - bin(decimal_number) is the way to turn a decimal number into binary. 
+            - bin(decimal_number) is the way to turn a decimal number into binary. 
         - Then, figure out when to call helper, and in this case, you can call helper on both freely because of the if not node taking care of the cases where the binary tree isn't complete.
  - Call the helper on the root and an empty string.
  - Return the total. 
