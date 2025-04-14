@@ -1,6 +1,6 @@
 # Leetcode 111 - Minimum Depth of Binary Tree (Easy)
 
-**Topic**: BFS, Minimum Depth
+**Topic**: BFS
 **Link**: https://leetcode.com/problems/minimum-depth-of-binary-tree/description/
 
 ## Notes:
