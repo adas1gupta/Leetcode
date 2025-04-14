@@ -19,7 +19,7 @@ class Solution:
                 if current == targetSum:
                     res.append(copy.copy(path))
                 path.pop()
-                current -= node.val
+                #current -= node.val
                 return
             helper(node.left, path, current)
             helper(node.right, path, current)
