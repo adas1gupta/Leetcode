@@ -1,7 +1,7 @@
-# Leetcode 383 - Ransom Note (Medium)
+# Leetcode 387 - Ransom Note (Medium)
 
 **Topic**: Arrays & Hashing  
-**Link**: https://leetcode.com/problems/ransom-note/description/
+**Link**: https://leetcode.com/problems/first-unique-character-in-a-string/
 
 ## Notes: 
  - hashmap, valid anagram type of solution 
