@@ -1,7 +1,7 @@
-# Leetcode 734 - Sentence Similarity (Easy)
+# Leetcode 336 - Palindrome Pairs (Hard)
 
 **Topic**: Arrays & Hashing  
-**Link**: https://leetcode.com/problems/sentence-similarity/description/
+**Link**: https://leetcode.com/problems/palindrome-pairs/description/
 
 ## Notes: 
  - key insight is that you want to go to each word and see what is missing from a word to make it a palindrome.
