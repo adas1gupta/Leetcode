@@ -1,15 +1,11 @@
 from collections import Counter
 
 class Solution:
-    def longestPalindrome(self, s: str) -> int:
-        charCount = Counter(s)
-        longest = 0
-        hasUneven = False
+    def firstUniqChar(self, s: str) -> int:
+        freq = Counter(s)
 
-        for k, v in charCount.items():
-            if v % 2 == 1:
-                hasUneven = True
-            
-            longest += (v // 2) * 2
+        for ind, char in enumerate(s):
+            if freq[char] == 1:
+                return ind
         
-        return longest + 1 if hasUneven else longest
+        return -1
