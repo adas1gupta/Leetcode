@@ -10,6 +10,8 @@
     - If you want to remove items quickly from an array, swap what you want to remove to the end and pop (O(1) time)
  - Then, have the map store a list of indices that correspond to where a number and its duplicates are held in the array. 
  - This way, you can quickly check if a number is already present in the array in O(1) time. 
+ - Don't make the mistake of comparing if the value you're removing is equal to the value at the end of the array. 
+    - Rather, what you care about is if the index you're trying to remove is the last index in the array. 
 
 ## 🧪 Code
 See `solution.py`
