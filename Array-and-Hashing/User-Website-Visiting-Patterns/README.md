@@ -1,7 +1,7 @@
-# Leetcode 336 - Palindrome Pairs (Hard)
+# Leetcode 1152 - Analyze User Website Visit Pattern (Medium)
 
 **Topic**: Arrays & Hashing  
-**Link**: https://leetcode.com/problems/palindrome-pairs/description/
+**Link**: https://leetcode.com/problems/analyze-user-website-visit-pattern/description/
 
 ## Notes: 
  - to generate combinations, use this code: 
@@ -13,6 +13,7 @@
  - Just read through the problem. 
  - It requires sorting based on timestamp
  - It requires a set for the combinations you generate because a user for a pattern only counts once. 
+    - MAKE SURE YOU'RE MINDFUL OF THIS SET REQUIREMENT!
  - It also wants the lexicographically smallest pattern if frequencies are equal. 
 
 ## 🧪 Code
