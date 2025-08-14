@@ -1,6 +1,6 @@
 # Leetcode 125 - Valid Palindrome (Easy)
 
-**Topic**: Arrays & Hashing  
+**Topic**: Two Pointers  
 **Link**: https://leetcode.com/problems/valid-palindrome/description/
 
 ## Notes: 
