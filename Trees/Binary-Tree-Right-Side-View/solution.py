@@ -26,4 +26,5 @@ class Solution:
                 if node.right:
                     new_queue.append(node.right)
             queue = new_queue
+            
         return res
