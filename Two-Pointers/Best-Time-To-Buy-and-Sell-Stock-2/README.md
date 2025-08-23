@@ -4,7 +4,8 @@
 **Link**: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
 
 ## Notes: 
- - Simple enough
+ - Weird question. 
+ - Apparently, it's just asking you to sum the profit gained by buying on one day and selling it the next. 
 
 ## 🧪 Code
 See `solution.py`
