@@ -5,6 +5,8 @@
 
 ## Notes: 
  - This can be done in 1 pass. 
+ - You don't have to include all the numbers that contain the same digit total. Just keep the largest one.
+    - This is important to maintain efficiency instead of using the append operation. 
 
 ## 🧪 Code
 See `solution.py`
