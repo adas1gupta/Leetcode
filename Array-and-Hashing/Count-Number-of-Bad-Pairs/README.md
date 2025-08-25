@@ -12,6 +12,8 @@
  - That means you would want to store i - nums[i] along with the frequency of its occurrence. 
  - Afterwards, you will realize that the number of good pairs you can form is the (frequency * (frequency - 1) // 2). 
  - Then, to find the bad pairs, collect the number of good pairs and subtract it from the number of pairs possible. 
+ - The reason why we are counting the number of times the difference between a num and its index appear is that it says:
+   - if the difference has been seen before, the current element can form good pairs with all those elements with that difference. 
  
 ## 🧪 Code
 See `solution.py`
