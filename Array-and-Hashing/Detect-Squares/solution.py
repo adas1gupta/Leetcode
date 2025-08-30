@@ -40,6 +40,7 @@ class DetectSquares:
                 ways += ycoors[-key] * xcoors[key] * self.points[tuple((x + key, y - key))]
 
         return ways
+        
 # Your DetectSquares object will be instantiated and called as such:
 # obj = DetectSquares()
 # obj.add(point)
