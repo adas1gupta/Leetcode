@@ -6,6 +6,7 @@
 ## Notes: 
  - For O(n) push, append first, pop and append elements except for the last element in the deque, and only return the first element for the top method. 
  - If you do self.stack[-1], it returns the last item in the queue. 
+ - Same for O(n) pop. Just pop and append until the last element, then pop the last element. 
 
 ## 🧪 Code
 See `solution.py`
