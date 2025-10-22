@@ -22,6 +22,12 @@
  - If you don't reach an operator, just update the number you're currently tracking with this piece of code: curr = curr * 10 + int(item)
  - Remember, since you haven't finished processing the last number in the string, you need to perform the operator check one last time after the while loop before you return the sum of the stack. 
 
+
+ - If you want to not import a truncating library, remember that the // operator truncates toward negative infinity. 
+  - The way to get past that is turning both the numbers to their absolute value versions so that they're guaranteed to truncate to 0 instead of -infinity, and then check what the actual division is equal to.
+  - Since we're guaranteed that the divisor won't be 0, we can simply divide and check if it's greater than or equal to 0. 
+  - If we're not guaranteed that the divisor won't be 0, then we can't divide and instead, we would have to multiply. 
+
 ## 🧪 Code
 See `solution.py`
 
