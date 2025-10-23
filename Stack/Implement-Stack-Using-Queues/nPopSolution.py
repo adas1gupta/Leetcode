@@ -3,20 +3,23 @@ class MyStack:
 
     def __init__(self):
         self.stack = deque([])
+        self.top_element = None
 
     def push(self, x: int) -> None:
         self.stack.append(x)
+        self.top_element = x
 
     def pop(self) -> int:
         n = len(self.stack)
         while n > 1:
-            self.stack.append(self.stack.popleft())
+            self.top_element = self.stack.popleft()
+            self.stack.append(self.top_element)
             n -= 1
-        
+
         return self.stack.popleft()
 
     def top(self) -> int:
-        return self.stack[-1]
+        return self.top_element
 
     def empty(self) -> bool:
         return len(self.stack) == 0
