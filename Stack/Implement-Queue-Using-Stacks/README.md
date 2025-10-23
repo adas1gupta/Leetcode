@@ -11,6 +11,12 @@
  - This changes peek as well because that means you first want to check if the second stack is empty before checking the first element in the first stack.
     - This is because of test cases where you pop, then continually push, then want to peek/pop again. 
 
+ - Algorithm is basically:
+ - Use two stacks: one for input (enqueue), one for output (dequeue/peek).
+ - When enqueuing, push to input stack. When dequeuing/peeking, pop from output stack. If output is empty, transfer all elements from input to output (this reverses them, giving FIFO order).
+ 
+ - Key insight: Elements only move once from input→output, so all operations are amortized O(1).
+
 ## 🧪 Code
 See `solution.py`
 
