@@ -12,6 +12,12 @@
  - The [::-1] turns this into [[-5, [-6, -7]], -4, -3]. Notice how the inner list isn't reversed.
  - Then, we approach the Nested List, and when we reverse it, we get it [[[-6, -7], -5]]. Notice the pattern of how, level by level, the list is eventually reversed to the order that we want it in. 
  - This is why we don't need to continually reverse in the first try. 
+ - Remember to use the while condition while self.stack
+
+ - Use a stack initialized with all elements in reverse order.
+ - In hasNext(): While the stack's top is a list (not an integer), pop it and push its contents onto the stack in reverse order. Return true if an integer is found at the top, false if stack is empty.
+ - In next(): Pop and return the top integer (hasNext() guarantees it's an integer).
+ - The key insight is that hasNext() does the flattening work lazily by unpacking nested lists only when needed.
 
 ## 🧪 Code
 See `solution.py`
