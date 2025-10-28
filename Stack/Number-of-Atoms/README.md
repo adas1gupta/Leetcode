@@ -12,7 +12,7 @@
  - Then, just build the result. 
 
 
- - 
+ - 'OH' isn't a singular element, so make sure to parse correctly by checking if the element is a lowercase letter
 
 ## 🧪 Code
 See `solution.py`

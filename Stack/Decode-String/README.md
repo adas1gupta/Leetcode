@@ -14,6 +14,11 @@
     - If you see a closing parenthesis, you pop the number and previous list off, then multiply the current_list with the number and add that to the previous_list you popped off. 
  - Then, perform the O(n) join at the end. 
 
+ 2nd Reattempt:
+ - Just add one level to the string. 
+ - After you encounter the closing parenthesis, compute current level and pop previous level and rebuild the string. 
+ - The rebuild is necessary probably because the combined string itself can be multiplied (nested levels). 
+
 ## 🧪 Code
 See `solution.py`
 
