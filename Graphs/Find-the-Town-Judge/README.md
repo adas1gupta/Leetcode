@@ -14,6 +14,8 @@
     - However, there is one edge case where there is 1 person and nothing in the input array. 
     - If that's the case, you return 1 because one person that doesn't trust himself fulfills the conditions.  
 
+ - This is O(V + E) time complexity because each item in the input array is an edge (edges correspond to the number of relationships that exist). 
+ - Then, you loop through people, and V is the number of nodes (the nodes here are people)
 
 ## 🧪 Code
 See `solution.py`
