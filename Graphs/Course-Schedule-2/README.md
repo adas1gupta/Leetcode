@@ -22,6 +22,12 @@
  - If you ever encounter a False from the dfs, return a False within the dfs and an empty array in the outer function. 
 
 
+## Mistakes:
+ - If you try to not use a visited set, you end up checking if adjacency_list[course] == [].
+    - This poses a problem because in the base case check, you have to append the item before you return True, but you risk appending the same item multiple times. 
+ 
+ - Since that's the case, it's best to just use a visited set. 
+
 ## 🧪 Code
 See `solution.py`
 
