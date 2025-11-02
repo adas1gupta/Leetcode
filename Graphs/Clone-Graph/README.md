@@ -14,6 +14,7 @@
         - Default value for val is 0
         - Default value for neighbors is None
  - First, have a hashmap mapping the input nodes to the corresponding clones. 
+    - Reason why you have this is so that when you spot the node in the graph you're building out, you know which copy to immediately grab. 
  - Use a graph traversal algorithm like dfs. 
     - Take in a node because that’s what you’re selecting to iterate past. 
     - The base case is that if a node already exists, then it’s cloned, so return its clone. 
@@ -23,6 +24,8 @@
     - Return the copy as that will be the answer/head of the new graph. 
  - return dfs(node) if node is not null and if it is, return None
 
+ - Algorithm is basically knowing which copy to grab based on the original node by using a dictionary -> using dfs to traverse the graph -> create a copy of the node using Node(node.val) -> storing the copy in the dictionary -> going through the neighbors of the original and appending the copy of the neighbors (using dfs call) to the neighbors array for the copy. 
+ 
 ## 🧪 Code
 See `solution.py`
 
