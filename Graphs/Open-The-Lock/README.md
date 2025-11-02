@@ -10,6 +10,9 @@
 
  - This is O(10000) time complexity and space complexity because there are only 10000 combinations that can be made with 0000. 
 
+## Mistakes:
+ - Remember to keep the visited.add line after you perform the check of the number not being in visited and not being in deadends
+
 
 ## 🧪 Code
 See `solution.py`
