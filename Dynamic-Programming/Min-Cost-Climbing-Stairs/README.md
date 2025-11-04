@@ -19,17 +19,27 @@
 
  - BOTTOM UP SPACE UNOPTIMIZED DP:
  
- - Build out the tree and cross out redundant portions until you can compress the tree into a line. 
- - This line is [curr = prev_one + prev_two, prev_one = prev_two + prev_three, ..., arr[n - 1] = arr[n] + arr[n + 1]]
- - This line means creating an array that computes position i from position i + 1 and i + 2.
-   - So n - 1 will need n, which is 1, and n + 1, which is 0 (an overshoot)
+ - Since you can take either 1 or two steps, you'll have two extra items at the end of the array. 
+ - Their values will be 0 because what you're trying to calculate is cost as it accumulates. 
+    - As a result, you don't want to mess up the cost calculations.
 
  - BOTTOM UP SPACE OPTIMIZED DP:
  
- - Notice from above that all you care about is the previous and previous to previous elements. 
- - [next_elem to compute, n, n + 1]
- - [n = n + n + 1, n + 1 = n, who cares about this element]
- - Therefore, we only need two variables: prev, prev_prev where prev, prev_prev = prev + prev_prev, prev
+ - You care about what the cost is at i + 1 and i + 2. 
+    - It makes sense to take the minimum of the two, right?
+
+ - Keep two variables to represent i + 1 and i + 2. 
+    - The goal is to have them end up at i = 0 for the first start point and i = 1 for the second start point. 
+ 
+ - As you start from the back to the front, you'll have the current cost, and you'll add the minimum of the two variables that are pointing to i + 1 and i + 2. 
+ 
+ - Then, i + 1 will move to i. It should store the minimum cost that was calculated with current + min(i + 1, i + 2). 
+    - And i + 2 will move to i + 1 to maintain the window size of 2. 
+ 
+ - It's entirely possible that i + 2 will the minimum between the two, so then that will be used to calculate the minimum. 
+    - i + 1 will move to the new minimum while i + 2 retains the old minimum. 
+ 
+ - One of these two will be the minimum, so take the minimum of either accumulated values. 
 
  
 ## 🧪 Code
