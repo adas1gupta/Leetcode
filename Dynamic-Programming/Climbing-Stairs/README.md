@@ -27,6 +27,13 @@
  - This line means creating an array that computes position i from position i + 1 and i + 2.
    - So n - 1 will need n, which is 1, and n + 1, which is 0 (an overshoot)
 
+ - BOTTOM UP SPACE OPTIMIZED DP:
+ 
+ - Notice from above that all you care about is the previous and previous to previous elements. 
+ - [next_elem to compute, n, n + 1]
+ - [n = n + n + 1, n + 1 = n, who cares about this element]
+ - Therefore, we only need two variables: prev, prev_prev where prev, prev_prev = prev + prev_prev, prev
+
  
 ## 🧪 Code
 See `solution.py`
