@@ -21,7 +21,9 @@
         - The reason why we do minutes - 1 is because when we finally turn fresh_to_rotten equal to fresh_fruit, we will perform a check on the last fresh fruit to turn rotten. 
         - Then, minutes gets incremented by 1 more than necessary. 
 
-
+## Mistakes
+ - If I'm calling bfs on left, right, up, and down positions, then I shouldn't be appending +2 to each direction to the queue. 
+ - Rather, I should just be appending [i, j] because they're already +1 to each direction. 
 
 ## 🧪 Code
 See `solution.py`
