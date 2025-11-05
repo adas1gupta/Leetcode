@@ -21,6 +21,12 @@
 
  - If you ever encounter a False from the dfs, return a False within the dfs and an empty array in the outer function. 
 
+ - Okay, the way you actually do Topological Sorting is:
+   - build an adjacency list. 
+   - create UNVISITED, VISITING, VISITED constants
+   - create a state array that's initialized to UNVISITED (state = [UNVISITED] * numCourses)
+   - proceed as normal
+
 
 ## Mistakes:
  - If you try to not use a visited set, you end up checking if adjacency_list[course] == [].
