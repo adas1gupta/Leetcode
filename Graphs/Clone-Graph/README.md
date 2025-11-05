@@ -26,6 +26,11 @@
 
  - Algorithm is basically knowing which copy to grab based on the original node by using a dictionary -> using dfs to traverse the graph -> create a copy of the node using Node(node.val) -> storing the copy in the dictionary -> going through the neighbors of the original and appending the copy of the neighbors (using dfs call) to the neighbors array for the copy. 
  
+## Mistakes:
+ - Need to map the copy to the original before looping through the neighbors.
+ - Since this graph is undirected, nodes will be in each other's neighbors array. 
+ - It's inherently cyclic, and it'll just keep creating new copies over and over instead of referring to the copy associated with the argument node.
+
 ## 🧪 Code
 See `solution.py`
 
