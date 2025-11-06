@@ -1,7 +1,7 @@
-# Leetcode 547 - Number of Provinces (Medium)
+# Leetcode 323 - Number of Connected Components in an Undirected Graph (Medium)
 
 **Topic**: Graphs, DFS 
-**Link**: https://leetcode.com/problems/number-of-provinces/description/
+**Link**: https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/description/
 
 ## Notes: 
  - Use Union-Find because the problem is asking you to find groups. 
@@ -19,7 +19,8 @@
     c. If the other owner is larger, set the parents[smaller_owner] = parents[one]
     d. Add the rank of the smaller owner to the larger owner. 
  
- 5. Since this is an adjacency matrix, just loop through and see which (i, j) == 1, and call union on that (i, j)
+ 5. Since this is an adjacency list, just loop through and call union find on both pairs of an edge and see if union yields True. 
+ 6. If it does, subtract 1. 
 
 ## 🧪 Code
 See `solution.py`
