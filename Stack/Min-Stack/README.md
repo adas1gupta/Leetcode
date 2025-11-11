@@ -7,6 +7,8 @@
  - Use a second stack to keep track of the minimum. 
  - When you pop, make sure to adjust the minimum tracker to be the top of the minimum tracking stack. 
     - If the minimum tracking stack is empty, simply reset to infinity. 
+ 
+ - Just be confident. Utilize a second data structure to keep track of the  minimum. You'll be fine. 
 
 ## 🧪 Code
 See `solution.py`
