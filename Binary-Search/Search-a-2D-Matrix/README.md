@@ -6,6 +6,9 @@
 ## Notes: 
  - Outer binary, inner binary. Pretty straightfoward. 
 
+ - Need to remember that after evaluating that the target is within a certain row, it can't be in other rows, so immediately return False
+    - Just gotta reason through it end to end. 
+
 ## 🧪 Code
 See `solution.py`
 
