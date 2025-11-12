@@ -4,7 +4,7 @@ class Solution:
 
         while left < right:
             mid = left + (right - left) // 2
-            print(nums[left], nums[mid], nums[right])
+
             if nums[mid] > nums[right]:
                 left = mid + 1
             else:
