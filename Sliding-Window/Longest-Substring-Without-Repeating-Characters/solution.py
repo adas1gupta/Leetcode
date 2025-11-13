@@ -1,20 +1,21 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        anchor, scanner = 0, 0
-        maximum = 0
+        left, right = 0, 0
+        longest = 0
         freq = {}
 
-        while scanner < len(s):
-            char = s[scanner]
+        while right < len(s):
+            char = s[right]
 
-            if char not in freq or freq[char] <= 0:
-                maximum = max(maximum, scanner - anchor + 1)
-            else:
-                while freq[char] > 0:
-                    freq[s[anchor]] -= 1
-                    anchor += 1
-                    
-            freq[char] = freq.get(char, 0) + 1
-            scanner += 1
+            freq[char] = freq.get(char, 0)
 
-        return maximum
+            while freq[char] > 0:
+                freq[s[left]] -= 1
+                left += 1
+            
+            freq[char] += 1
+            right += 1
+
+            longest = max(longest, right - left)
+            
+        return longest

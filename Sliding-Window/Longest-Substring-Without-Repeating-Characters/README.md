@@ -11,6 +11,11 @@
     - You also need to update the frequency of the character after you check and not in the if or else part of the code. 
  - Finally, return the maximum. 
 
+
+## Mistakes:
+ - You can't record the length of the substring every iteration. 
+ - You must only record when you know that left has finally gotten rid of the character that right was stuck on with a frequency greater than 1. 
+
 ## 🧪 Code
 See `solution.py`
 
