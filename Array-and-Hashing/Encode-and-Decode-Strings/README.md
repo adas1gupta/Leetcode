@@ -1,7 +1,7 @@
 # Leetcode 271 - Encode and Decode Strings (Medium)
 
 **Topic**: Arrays & Hashing  
-**Link**: https://neetcode.io/problems/string-encode-and-decode?list=neetcode150
+**Link**: https://leetcode.com/problems/encode-and-decode-strings/
 
 ## Notes: 
  - When you start looping through the string in decode, use two pointers. 
