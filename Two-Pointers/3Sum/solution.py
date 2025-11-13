@@ -14,15 +14,16 @@ class Solution:
 
                 if first + second + third == 0:
                     res.append([first, second, third])
+
+                    while j < k and nums[j] == second:
+                        j += 1
+                
+                    while k > j and nums[k] == third:
+                        k -= 1
+
                 elif first + second + third < 0:
                     j += 1
                 else:
-                    k -= 1
-
-                while j < k and nums[j] == second:
-                    j += 1
-                
-                while k > j and nums[k] == third:
                     k -= 1
                 
         return res

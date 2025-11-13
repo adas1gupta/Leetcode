@@ -1,31 +1,27 @@
 class Solution:
     def threeSumClosest(self, nums: List[int], target: int) -> int:
         nums = sorted(nums)
-        closest = float('inf')
-        to_return = 0
+        closest = None
+        difference = float('inf')
 
         for i in range(len(nums) - 2):
-            num = nums[i]
+            if i > 0 and nums[i] == nums[i - 1]:
+                continue
             
             j, k = i + 1, len(nums) - 1
 
             while j < k:
-                first = nums[i]
-                second = nums[j]
-                third = nums[k]
-                
-                triplet_sum = first + second + third
-                diff = abs(target - triplet_sum)
-                if diff == 0:
-                    return triplet_sum
-                elif diff < closest:
-                    closest = diff
-                    to_return = triplet_sum
-                
-                if triplet_sum > target:
-                    k -= 1
-                else:
-                    j += 1
-                
+                first, second, third = nums[i], nums[j], nums[k]
+                three_sum = first + second + third
+                diff = abs(target - three_sum)
 
-        return to_return
+                if diff < difference:
+                    difference = diff
+                    closest = three_sum
+
+                elif three_sum < target:
+                    j += 1
+                else:
+                    k -= 1
+
+        return closest

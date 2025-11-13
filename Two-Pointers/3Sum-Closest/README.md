@@ -5,6 +5,8 @@
 
 ## Notes: 
  - Don't care about duplicates here
+    - This is because if your j and k are 5 + 2 and the target is 9, you still want to keep 5 in case you get 5 + 4, which is 9.
+    - It doesn't matter if we go above or below the target. We want the closest absolute value difference.  
  - Don't get mixed up with using abs value and mistaking that to mean if the difference is < the target, we need to find a smaller value. 
 
 ## 🧪 Code
