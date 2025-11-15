@@ -18,6 +18,11 @@
  - Then, you want to send back up the maximum of the subtree instead of the combined sum because sending up the combined sum yields to incorrect values. 
  
 
+# Mistakes
+
+ - It's not left + right - 1 because when you do 1 + dfs(node.X), it's 1 edge to left AND 1 edge to right.
+ - Left to node is 1 edge and right to node is another edge so left + right would be 2 edges here instead of left + right - 1. 
+
 ## 🧪 Code
 See `solution.py`
 
