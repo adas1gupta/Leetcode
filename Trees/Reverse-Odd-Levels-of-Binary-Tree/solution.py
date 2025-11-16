@@ -4,27 +4,22 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-from collections import deque
 class Solution:
     def reverseOddLevels(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         queue = deque([root])
+
         levels = 0
-
         while queue:
-            right = 0
-            nodes = list(queue)
             if levels % 2 == 1:
-                r = len(queue) - 1
+                nodes = list(queue)
+                i, n = 0, len(nodes) - 1
 
-                i = 0
-                n = len(queue) 
-                
-                while i <= r:
-                    nodes[i].val, nodes[r].val = nodes[r].val, nodes[i].val
+                while i <= n:
+                    nodes[i].val, nodes[n].val = nodes[n].val, nodes[i].val
 
                     i += 1
-                    r -= 1
-
+                    n -= 1
+                
             for _ in range(len(queue)):
                 node = queue.popleft()
 
@@ -32,7 +27,7 @@ class Solution:
                     queue.append(node.left)
                 if node.right:
                     queue.append(node.right)
-
+            
             levels += 1
         
         return root
