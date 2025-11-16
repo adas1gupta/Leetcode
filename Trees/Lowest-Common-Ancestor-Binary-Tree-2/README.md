@@ -26,6 +26,8 @@
    - If Node is none, that means p nor q were able to be found.
    - So just return [False, False]
  - Then, think about what to return past None or leaf node. 
+
+ - Same problem. It's already taken care of because lca is originally None. 
  
 
 ## 🧪 Code
