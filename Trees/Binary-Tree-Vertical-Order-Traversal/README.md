@@ -13,6 +13,11 @@
  - Columns to the left are appended with the column of the node just popped - 1. 
  - Columns to the right are appended with the column of the node just popped + 1. 
 
+# Hard
+ - For the hard version of this problem, the hard part is clarifying requirements. 
+ - They want you to sort by column first, then row, then value.
+ - Store the arrays, with each value having its row, by columns in a hashmap.
+ - Then sort by row, and then by value using (lambda x: (x[0] (row), x[1] (value)))
  
 ## 🧪 Code
 See `solution.py`
