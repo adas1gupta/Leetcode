@@ -7,16 +7,16 @@
 class Solution:
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
         
+
         def dfs(p, q):
             if not p and not q:
                 return True
             if not p or not q:
                 return False
             
-            mirror = p.val == q.val
-            left = mirror and dfs(p.left, q.right)
-            right = mirror and dfs(p.right, q.left)
+            left = dfs(p.left, q.right)
+            right = dfs(p.right, q.left)
 
-            return left and right
+            return p.val == q.val and left and right
         
         return dfs(root, root)
