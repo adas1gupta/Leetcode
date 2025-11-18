@@ -10,6 +10,7 @@
  - Return if not node or answer already found. 
 
  - Do inorder traversal and increment count before you check count. 
+ - BST = INORDER FOR COLLECTING ELEMENTS IN SORTED ORDER
 
  
 ## 🧪 Code
