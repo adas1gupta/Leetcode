@@ -10,6 +10,9 @@
  - Update max_length.
  - Call dfs on left and right
 
+ - It's okay to pass in current_length as an argument rather than having to use a nonlocal. 
+ - If you store it as nonlocal, you need to have a reset mechanism when exploring the next path (right)
+
  
 ## 🧪 Code
 See `solution.py`
