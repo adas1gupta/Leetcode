@@ -6,44 +6,38 @@
 #         self.right = right
 class Solution:
     def pseudoPalindromicPaths (self, root: Optional[TreeNode]) -> int:
-        palindromes = 0
+        paths = 0
         freq = {}
 
-        def traverse_dict(even):
+        def palindromic():
+            even = False
+            if sum(freq.values()) % 2 == 0:
+                even = True
+            
             counter = 0
-            if even:
-                for val in freq.values():
-                    if val % 2 == 1:
-                        return False
-            else:
-                for val in freq.values():
-                    if val % 2 == 1:
-                        counter += 1
-                    if counter > 1:
-                        return False
+            for val in freq.values():
+                if val % 2 == 1:
+                    counter += 1
+                
+                if (even and counter > 0) or counter > 1:
+                    return False
             
             return True
 
         def dfs(node):
-            nonlocal palindromes
+            nonlocal paths
             if not node: return
-
+            
             freq[node.val] = freq.get(node.val, 0) + 1
-
+            
             if not node.left and not node.right:
-                palindromic = False
-                if sum(freq.values()) % 2 == 0:
-                    palindromic = traverse_dict(True)
-                else:
-                    palindromic = traverse_dict(False)        
-
-                if palindromic:
-                    palindromes += 1
+                if palindromic():
+                    paths += 1
             
             dfs(node.left)
             dfs(node.right)
-            
+
             freq[node.val] -= 1
 
         dfs(root)
-        return palindromes
+        return paths
