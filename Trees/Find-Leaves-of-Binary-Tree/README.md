@@ -14,7 +14,9 @@
  - Then, update the levels hashmap to append that node at that height. 
  - Then, return the max height. 
 
- 
+# Mistakes
+ - Important to remember that when collecting height, we need to return the max of the left and right heights to find the actual height associated with a given node.  
+
 ## 🧪 Code
 See `solution.py`
 
