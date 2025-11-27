@@ -1,19 +1,19 @@
 class Solution:
     def findCircleNum(self, isConnected: List[List[int]]) -> int:
         parents = [i for i in range(len(isConnected))]
-        ranks = [1 for i in range(len(isConnected))]
+        ranks = [1 for i in range(len(isConnected))] # the point of the ranks array is for an optimization where the smaller graph is attached to the bigger one. 
 
         #find owners
         def find(num):
             while num != parents[num]:
-                parents[num] = parents[parents[num]]
+                parents[num] = parents[parents[num]] # path compression (optimization to amortize time complexity to ackermann function)
                 num = parents[num]
             
             return num
         
         #compare which owners have the larger rank to see which one swallows the other
         def union(first, second):
-            one, two = find(first), find(second)
+            one, two = find(first), find(second) # finds root parents 
 
             if one == two: return
 
