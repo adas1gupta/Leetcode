@@ -25,6 +25,9 @@
  
  - Then, to check for more than 1 graph, simply check if the length of the visited set is equal to the number of vertices. 
 
+## Mistakes
+ - Remember to have a prev to make sure you're not recursing onto the same node you're on from a neighbor node.
+ - A tree implies that there can't be other trees, so you still have to check if the number of nodes you visited is equal to the total number of nodes. 
 
 ## 🧪 Code
 See `solution.py`
