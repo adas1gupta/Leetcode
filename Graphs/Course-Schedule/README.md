@@ -15,6 +15,10 @@
 
  - Then just loop through the courses in the outer loop and run that dfs on it, seeing if you get a False at any point.
 
+## Mistakes:
+ - Need to recognize that this is a graph problem with cycles being the issue instead of using a visited set and seeing if its length is equal to numCourses.
+ - Also, need to initialize every course in numCourses with a list so that if a course doesn't have prereqs, it still returns True. 
+   - Or you can include another if check. 
 
 ## 🧪 Code
 See `solution.py`
