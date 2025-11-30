@@ -8,6 +8,9 @@
  - Notice the pattern. 
  - Join the stack and add a / to the beginning. 
 
+## Mistakes:
+ - When there are consecutive empty strings, using .split(" ") adds empty strings to the result array
+
 ## 🧪 Code
 See `solution.py`
 
