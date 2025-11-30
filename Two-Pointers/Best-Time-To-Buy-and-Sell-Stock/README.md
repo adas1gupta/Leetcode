@@ -6,6 +6,8 @@
 ## Notes: 
  - Simple enough
 
+ - Just realize that as you traverse through the array, if you find a value smaller than the current value left is pointing at, just set left equal to the index of that value. 
+
 ## 🧪 Code
 See `solution.py`
 
