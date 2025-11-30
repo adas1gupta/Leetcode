@@ -4,8 +4,6 @@
 **Link**: https://leetcode.com/problems/recover-binary-search-tree/description/
 
 ## Notes:
-
-# BFS
  - Think of this problem like an array. 
  
  - [1, 6, 3, 4, 2] Basically, the nodes I should be swapping are 6 and 2.
@@ -18,6 +16,11 @@
 
  - Then you can do if first and curr > prev: second = curr
 
+ - We are expecting that during an inorder traversal, every node will be greater than the one previous to it. 
+ - However, when we see a node that isn't greater than, it means that:
+   - The first occurrence is when the previous node is the violating node. 
+ - The moment that node is found, then the second occurrence is when the current node is less than the previous node. 
+   - The current node is then the violating node. 
 
 ## 🧪 Code
 See `solution.py`
