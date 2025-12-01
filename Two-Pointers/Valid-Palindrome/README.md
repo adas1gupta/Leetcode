@@ -8,6 +8,9 @@
  - Keep in mind that the input is not perfectly alphanumeric.
  - Also, numbers count, so look for alphanumeric instead of alphabetical 
 
+ - When you use a while loop to skip past nonalphanumeric characters, make sure to check that left <= right before index access.
+    - If not, just break.
+
 ## 🧪 Code
 See `solution.py`
 
