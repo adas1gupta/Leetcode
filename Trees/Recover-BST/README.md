@@ -22,6 +22,11 @@
  - The moment that node is found, then the second occurrence is when the current node is less than the previous node. 
    - The current node is then the violating node. 
 
+## Mistakes:
+ - When you change prev between the checks for first and second, you're changing what prev points to for the calculation for no reason.
+ - Keep it consistent. Keep it pushing p!
+
+
 ## 🧪 Code
 See `solution.py`
 
