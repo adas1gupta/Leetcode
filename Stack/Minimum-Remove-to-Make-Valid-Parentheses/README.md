@@ -14,6 +14,10 @@
  - Then, we go through the stack and see which INDICES of the open parentheses are unmatched and add that to the set. 
  - Then, we just go through the original string and add it to the result string if the index is not in the set. 
 
+## Mistakes:
+ - Need to store closing parentheses that don't have an opener somewhere so set needs to be initialized first as well to add those closing parentheses.
+ - The stack is what will contain the unclosed opening parentheses. 
+
 ## 🧪 Code
 See `solution.py`
 
