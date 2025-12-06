@@ -4,10 +4,8 @@
 **Link**: https://leetcode.com/problems/search-in-a-binary-search-tree/description/
 
 ## Notes:
- - Just make sure to implement binary search here. 
-
- - This is O(h) time complexity, which is O(log n) and O(n) in worst case (skewed tree)
-
+ - Just make sure to implement binary search here iteratively.
+ - This is because this is a new pattern that applies to searching, precessor/successor, and insertion/deletion
  
 ## 🧪 Code
 See `solution.py`
