@@ -12,7 +12,16 @@
 
  - We need to know what the middle value is so that we can split the "array" in half multiple times into their left and right trees.
 
- 
+ - How this works is that we basically recurse until we reach the first node. 
+    - (0, 5) -> 3
+    - (0, 2) -> 1
+    - (0, 1) -> 0
+    - (0, -1) -> Return None
+    - (0, 1) -> Now we form the node and that will be the left of (0, 2)
+ - Once we reach the leftmost node, that's where the first value will go.
+ - Then, we actually make the value and try to form the right tree.
+ - Then, we return, and the left tree is fully formed.
+
 ## 🧪 Code
 See `solution.py`
 
