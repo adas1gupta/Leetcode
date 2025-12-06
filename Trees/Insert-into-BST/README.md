@@ -11,7 +11,7 @@
   
  - Eventually, when you reach None, return the new node with the value.
 
-
+ - You're basically finding the next available spot in the tree that you can insert the value in, and the moment you encounter a None is when you insert. 
 
  
 ## 🧪 Code
