@@ -8,11 +8,11 @@
  - Essentially, it's just Employee objects.
  - Just go through each Employee and map ID to Employee.
     - Reason is that we are starting with ID and want to bounce from ID to ID.
-    - Thus, we need a way to access ID in O(1) time. 
+    - Thus, we need a way to access ID in O(1) time.
 
- - No need for a visited set because subordinates implies that you cannot have a manager be a subordinate to an employee. 
+ - No need for a visited set because subordinates implies that you cannot have a manager be a subordinate to an employee.
 
- 
+
 ## 🧪 Code
 See `solution.py`
 
