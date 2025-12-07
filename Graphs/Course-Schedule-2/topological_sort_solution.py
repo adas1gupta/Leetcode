@@ -21,7 +21,7 @@ class Solution:
                 if not dfs(item):
                     return False
                 
-            res.append(n)    
+            res.append(n)
             state[n] = VISITED
             
             return True
