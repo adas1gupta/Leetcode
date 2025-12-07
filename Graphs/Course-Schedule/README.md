@@ -18,7 +18,9 @@
 ## Mistakes:
  - Need to recognize that this is a graph problem with cycles being the issue instead of using a visited set and seeing if its length is equal to numCourses.
  - Also, need to initialize every course in numCourses with a list so that if a course doesn't have prereqs, it still returns True. 
-   - Or you can include another if check. 
+   - Or you can include another if check.
+
+ - Make sure to use a cycle set along with a visited set where visited stores a processed node and cycle detects cycles.
 
 ## 🧪 Code
 See `solution.py`

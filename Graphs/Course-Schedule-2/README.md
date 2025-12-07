@@ -35,7 +35,7 @@
  - Since that's the case, it's best to just use a visited set. 
 
  - Use two sets to detect cycle and not perform topological sort + add items multiple times to the result list
- - Make sure that when you reach the base course (no prereqs), you add that course to the visited set so that you don't add it multiple times to the result set. 
+ - Make sure that when you reach the base course (no prereqs), you add that course to the visited set so that you don't add it multiple times to the result set.
 
 ## 🧪 Code
 See `solution.py`
