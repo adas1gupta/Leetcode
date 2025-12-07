@@ -37,6 +37,8 @@
  - Use two sets to detect cycle and not perform topological sort + add items multiple times to the result list
  - Make sure that when you reach the base course (no prereqs), you add that course to the visited set so that you don't add it multiple times to the result set.
 
+ - If you encounter a node that is actually the prereq with no other prereqs, you need to add it to visited after you append so it isn't counted twice.
+
 ## 🧪 Code
 See `solution.py`
 

@@ -1,31 +1,33 @@
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
-        adjacency_list = {c: [] for c in range(numCourses)}
-
-        for res, src in prerequisites:
-            adjacency_list[res].append(src)
+        adjacency_list = {}
+        for after, before in prerequisites:
+            if after not in adjacency_list:
+                adjacency_list[after] = []
+            adjacency_list[after].append(before)
         
-        res = []
         visited, cycle = set(), set()
-
-        def dfs(course):
-            if course in cycle:
-                return False
-            if course in visited:
+        res = []
+        def dfs(node):
+            if node in cycle: return False
+            if node in visited: return True
+            if node not in adjacency_list: 
+                res.append(node)
+                visited.add(node)
                 return True
             
-            cycle.add(course)
+            cycle.add(node)
 
-            for pre_req in adjacency_list[course]:
-                if dfs(pre_req) == False:
-                    return False
-            
-            cycle.remove(course)
-            visited.add(course)
-            res.append(course)
+            for neighbor in adjacency_list[node]:
+                if not dfs(neighbor): return False
+                
+            cycle.remove(node)
+            res.append(node)            
+            visited.add(node)
+
+            return True
         
-        for c in range(numCourses):
-            if dfs(c) == False:
-                return []
+        for crs in range(numCourses):
+            if not dfs(crs): return []
         
         return res
