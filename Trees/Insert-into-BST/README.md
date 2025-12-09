@@ -13,7 +13,10 @@
 
  - You're basically finding the next available spot in the tree that you can insert the value in, and the moment you encounter a None is when you insert. 
 
- 
+ - So there apparently is an iterative solution to this problem.
+ - Follows the same logic of just traversing until you find a None.
+ - Use break to simply exit. Otherwise, you'll keep creating new tree nodes.
+
 ## 🧪 Code
 See `solution.py`
 
