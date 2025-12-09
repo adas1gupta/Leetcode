@@ -25,7 +25,10 @@
  - If I'm calling bfs on left, right, up, and down positions, then I shouldn't be appending +2 to each direction to the queue. 
  - Rather, I should just be appending [i, j] because they're already +1 to each direction. 
 
- - Need to put the traversing logic within the queue (func(i +/- 1, j +/- 1)) and then within the bfs function is when I append to the queue. 
+ - Need to put the traversing logic within the queue (func(i +/- 1, j +/- 1)) and then within the bfs function is when I append to the queue.
+    - This is because you want the bfs function to actually evaluate if the cells are worth putting into the queue.
+    - Remember that when you're putting into the queue, you're essentially confirming that another level exists, but if all the cells you're adding are invalid, then you're adding an unnecessary level.
+
 
 ## 🧪 Code
 See `solution.py`
