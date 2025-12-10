@@ -27,7 +27,11 @@
 
 ## Mistakes
  - Remember to have a prev to make sure you're not recursing onto the same node you're on from a neighbor node.
- - A tree implies that there can't be other trees, so you still have to check if the number of nodes you visited is equal to the total number of nodes. 
+ - A tree implies that there can't be other trees, so you still have to check if the number of nodes you visited is equal to the total number of nodes.
+
+ - You don't need a cycle set.
+
+   ![alt text](image.png)
 
 ## 🧪 Code
 See `solution.py`
