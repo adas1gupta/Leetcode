@@ -8,7 +8,10 @@
  - Simply replace by having a pointer to the most recent unique number, incrementing it to the next spot, and then replacing whatever is there with the end pointer. 
  - For [0, 0, 1, 2, 3], the start pointer will increment to index 1, then index 1 will contain 1, and then when it goes to 2, then start will go to index 2, and index 2 will be 2. 
  - For [0, 1, 2, 2, 2], the start pointer will increment to index 1, and index 1 will contain the same number (1), and then it'll go to index 2 and contain the same number (2). 
- 
+
+## Mistakes:
+ - Just set anchor equal to 1 because the first number is guaranteed to be unique.
+ - Furthermore, this deals with the edge case of having only 1 element.
 
 ## 🧪 Code
 See `solution.py`
