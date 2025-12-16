@@ -11,6 +11,9 @@
     - (Draw it out if need be). 
     - So just check if both nodes have the same parent, and if they do, that's a cyclic edge. 
 
+ - Reason why union find works here is because when you are trying to connect already connected components, you'll find that they have the same parent.
+ - This means that if they're already connected, and you're trying to connect them, then there's a cycle.
+
 ## 🧪 Code
 See `solution.py`
 
