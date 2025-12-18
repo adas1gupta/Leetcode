@@ -15,6 +15,13 @@
 
  - Then just loop through the courses in the outer loop and run that dfs on it, seeing if you get a False at any point.
 
+## BFS:
+ - The reason why bfs topological sort works here is because after building the adjacency_list, there won't be any 0s in the indegree array
+    - The only time there will be 0s in the indegree array is when there's a disconnected graph.
+ - As a result, when you go through the queue initialized with that disconnected graph, you'll build the visited set.
+ - However, the visited set will lack the other nodes, so it won't be equal to numCourses
+
+
 ## Mistakes:
  - Need to recognize that this is a graph problem with cycles being the issue instead of using a visited set and seeing if its length is equal to numCourses.
  - Also, need to initialize every course in numCourses with a list so that if a course doesn't have prereqs, it still returns True. 
