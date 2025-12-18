@@ -1,7 +1,7 @@
 class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
         n = len(edges)
-        parents = [i for i in range(n + 1)]
+        parents = [i for i in range(n + 1)] # need the +1 because this is 1-based indexing
         ranks = [1 for i in range(n + 1)]
 
         def find(num):
