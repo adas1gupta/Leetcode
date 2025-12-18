@@ -5,7 +5,8 @@ class Solution:
 
         def find(num):
             while num != parents[num]:
-                parents[num] = parents[parents[num]] #path compression
+                # current parent is equal to parent of current parent
+                parents[num] = parents[parents[num]] # path compression
                 num = parents[num]
             
             return num
@@ -15,7 +16,8 @@ class Solution:
 
             if first == second: return False
 
-            if ranks[first] > ranks[second]:
+            if ranks[first] > ranks[second]: # combine trees by setting parent of smaller to the parent of larger
+            # and adding rank of smaller to the rank of the larger
                 parents[second] = first
                 ranks[first] += ranks[second]
             else:
