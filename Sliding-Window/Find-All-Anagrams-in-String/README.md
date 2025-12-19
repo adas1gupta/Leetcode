@@ -15,6 +15,12 @@
  - IMPORTANT: do not check if updating left's character count creates more matches because you're updating left to point to a character that was already accounted for in the window. 
  - Once all that is done is when you return the list. 
 
+## Mistakes:
+ - Check left character is equal in both p and s_subset because you don't want to repeatedly decrement current_matches with something that's already mismatched.
+    - Then, put that before you decrement the left character's count.
+
+ - Make sure to append left + 1 because you haven't incremented left yet.
+
 ## 🧪 Code
 See `solution.py`
 
