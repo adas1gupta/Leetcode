@@ -15,6 +15,9 @@
  - Return a list of the x, y coordinates in the heap by simply looping through the max_heap and forming a list out of the item’s first and second indexes to add to the result list. 
  - Time complexity is n log k because the size of the heap is k, and heap operations are always log (size_of_the_heap), and those heap operations are happening every iteration of the for loop. 
 
+## Mistakes:
+ - Need to actually use x^2 + y^2 because using simple Manhattan distance leads to edge cases of equal Manhattan distance but unequal distance ((1, 3) vs (2, 2) aka 10 vs 8)
+
 ## 🧪 Code
 See `solution.py`
 
