@@ -18,6 +18,10 @@
  - Create a current_time counter and set it to 0. 
  - The while condition is while you have frequencies or cooldowns left because frequencies can be empty while there are items left in the queue that can potentially be added back to the frequency max heap. 
 
+## Mistakes:
+ - The algorithm is to keep popping the max_count, and then record the next time it's available using a queue because the cooldown that will appear earlier will enter the queue earlier, so popping left becomes efficient.
+
+
 ## 🧪 Code
 See `solution.py`
 
