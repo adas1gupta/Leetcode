@@ -23,6 +23,8 @@
     - Return the top of the element because you acquired the k largest elements and want the kth largest one (aka the smallest of those largest elements).
     - Remember, you want the kth largest element, not the kth smallest one. 
 
+ - self.heap[0] will be the kth largest element because you pop off the smallest elements when you exceed k.
+
 ## 🧪 Code
 See `solution.py`
 
