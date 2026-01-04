@@ -19,6 +19,11 @@
  - After you encounter the closing parenthesis, compute current level and pop previous level and rebuild the string. 
  - The rebuild is necessary probably because the combined string itself can be multiplied (nested levels). 
 
+## Mistakes:
+ - Stack should only store state.
+ - Current_list should only store the actual characters.
+
+
 ## 🧪 Code
 See `solution.py`
 
