@@ -10,6 +10,12 @@
  
  - Just be confident. Utilize a second data structure to keep track of the  minimum. You'll be fine. 
 
+## Mistakes:
+ - Don't use a variable to keep track of the minimum because you can pop the minimum but the minimum variable can still be the popped minimum.
+
+ - Instead, to store the minimum, you compare to the top value of the minimum STACK and the value you're appending.
+
+
 ## 🧪 Code
 See `solution.py`
 
