@@ -12,6 +12,11 @@
     - If it’s not, then those are separate intervals, and you simply append the current one. 
  - Then, return the result array. 
 
+## Mistakes:
+ - Remember that the invariant is to simply compare the current interval with the interval before and if they overlap -> take the maximum end.
+    - Start will always be less than the other start because they're sorted by start at the beginning.
+
+
 ## 🧪 Code
 See `solution.py`
 
