@@ -1,33 +1,26 @@
 class Solution:
     def updateMatrix(self, mat: List[List[int]]) -> List[List[int]]:
+        queue = deque()
         ROWS, COLS = len(mat), len(mat[0])
-        queue = deque([])
         visited = set()
+        directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 
         for i in range(ROWS):
             for j in range(COLS):
                 if mat[i][j] == 0:
-                    queue.append((i, j, 0))
-        
-        def bfs(i, j, dis):
-            if i >= ROWS or i < 0: return
-            if j >= COLS or j < 0: return
-            if (i, j) in visited: return
-            if mat[i][j] == 0: return
-
-            visited.add((i, j))
-
-            mat[i][j] = dis
-
-            queue.append((i, j, dis))
+                    queue.append((i, j))
+                    visited.add((i, j))
         
         while queue:
             for _ in range(len(queue)):
-                x, y, dist = queue.popleft()
+                x, y = queue.popleft()
 
-                bfs(x + 1, y, dist + 1)
-                bfs(x - 1, y, dist + 1)
-                bfs(x, y + 1, dist + 1)
-                bfs(x, y - 1, dist + 1)
+                for dr, dc in directions:
+                    nr, nc = dr + x, dc + y
+
+                    if 0 <= nr < ROWS and 0 <= nc < COLS and mat[nr][nc] == 1 and (nr, nc) not in visited:
+                        mat[nr][nc] = mat[x][y] + 1
+                        queue.append((nr, nc))
+                        visited.add((nr, nc))
         
         return mat

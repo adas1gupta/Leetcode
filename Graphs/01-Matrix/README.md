@@ -14,6 +14,10 @@
 
  - You can modify original matrix or have another matrix to store the results. It doesn't matter. 
 
+## Mistakes:
+ - Need to use a visited set because cells that get updated to 1 will be added in again, thereby overwriting their distances.
+
+
 ## 🧪 Code
 See `solution.py`
 
