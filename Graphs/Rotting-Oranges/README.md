@@ -29,6 +29,9 @@
     - This is because you want the bfs function to actually evaluate if the cells are worth putting into the queue.
     - Remember that when you're putting into the queue, you're essentially confirming that another level exists, but if all the cells you're adding are invalid, then you're adding an unnecessary level.
 
+ - Need to include the nested for loop within the queue while loop so minutes is incremented correctly.
+    - Otherwise, you are incrementing per item in the level of a queue rather than per level
+
 
 ## 🧪 Code
 See `solution.py`
