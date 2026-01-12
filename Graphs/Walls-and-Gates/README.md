@@ -20,6 +20,9 @@
  - Have a distance variable that increments per level of the queue. 
  - Write the bfs with while q, for _ in range(len(q)), pop left, set the room equal to distance (start with 0 so gates are set to 0), and then add the adjacent rooms to the room that you're on. 
 
+# Mistakes:
+ - Need to mark it the moment you add it to the queue. 
+
 
 ## 🧪 Code
 See `solution.py`
