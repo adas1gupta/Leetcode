@@ -1,20 +1,13 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        first = {}
-        second = {}
-        n = len(nums)
-
-        if n == 1:
+        if len(nums) == 1:
             return nums[0]
 
-        def dp(i, last, memo):
-            if i in memo:
-                return memo[i]
-            if i >= last:
-                return 0
-            
-            memo[i] = max(nums[i] + dp(i + 2, last, memo), dp(i + 1, last, memo))
-        
+        def dp(start, i, memo):
+            if i < start: return 0
+            if i in memo: return memo[i]
+
+            memo[i] = max(nums[i] + dp(start, i - 2, memo), dp(start, i - 1, memo))
             return memo[i]
         
-        return max(dp(0, n - 1, first), dp(1, n, second))
+        return max(dp(1, len(nums) - 1, {}), dp(0, len(nums) - 2, {}))

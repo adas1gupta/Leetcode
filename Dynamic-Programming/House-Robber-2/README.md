@@ -11,7 +11,11 @@
  - The idea is that you apply the house robber solution to two parts of the array, one from 0 to 2nd to last and the other from 1 to last. 
  - Pass in a separate memo for each and take the maximum of the results of dp on both arrays. 
 
- 
+## Mistakes:
+ - You'll most likely need to send in separate start and memos.
+ - However, you'll need to remember that there's an edge case where an array with only 1 element will not be processed by the dp calls
+
+
 ## 🧪 Code
 See `solution.py`
 
