@@ -41,7 +41,11 @@
  
  - One of these two will be the minimum, so take the minimum of either accumulated values. 
 
- 
+## Mistakes
+ - The recurrence relationship is taking the minimum of 1 step behind versus two steps behind, and adding the current cost to it.
+ - Then, check the last and the second to last positions to see which yields the smallest value.
+
+
 ## 🧪 Code
 See `solution.py`
 
